@@ -128,7 +128,7 @@ a {
   animation: shine 6.8s ease-in-out infinite;
 }
 
-.visual-frame img {
+.visual-frame > img:not(.replacement-product) {
   display: block;
   width: 100%;
   height: auto;
@@ -154,7 +154,9 @@ a {
 
 .replacement-product {
   z-index: 4;
+  display: block;
   width: auto;
+  max-width: none;
   filter: drop-shadow(0 12px 18px rgba(6, 61, 37, 0.2));
 }
 
