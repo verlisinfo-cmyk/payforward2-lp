@@ -119,6 +119,7 @@ a {
 
 .visual-frame::after {
   position: absolute;
+  z-index: 8;
   inset: 0;
   pointer-events: none;
   content: "";
@@ -132,6 +133,52 @@ a {
   width: 100%;
   height: auto;
 }
+
+.product-composite {
+  isolation: isolate;
+}
+
+.product-cover,
+.replacement-product {
+  position: absolute;
+  pointer-events: none;
+}
+
+.product-cover {
+  z-index: 3;
+  background:
+    radial-gradient(circle at 50% 44%, rgba(255, 255, 255, 0.98), rgba(255, 252, 244, 0.98) 60%, rgba(255, 250, 240, 0.92));
+  border-radius: 8px;
+  box-shadow: inset 0 0 32px rgba(201, 152, 42, 0.08);
+}
+
+.replacement-product {
+  z-index: 4;
+  width: auto;
+  filter: drop-shadow(0 12px 18px rgba(6, 61, 37, 0.2));
+}
+
+.hero-immura-cover { left: 68.8%; top: 42.3%; width: 21.4%; height: 22.3%; }
+.hero-immura { left: 72.2%; top: 43%; height: 17.2%; }
+
+.evo-gel-card-cover { left: 38.4%; top: 21.6%; width: 25%; height: 22%; }
+.evo-lotion-card-cover { left: 76.2%; top: 21.5%; width: 16.5%; height: 22.4%; }
+.evo-gel-line-cover { left: 18.8%; top: 52.9%; width: 15.6%; height: 15.5%; }
+.evo-lotion-line-cover { left: 60.6%; top: 51.4%; width: 16.5%; height: 17.6%; }
+.evo-immura-cover { left: 72.6%; top: 79.6%; width: 20.6%; height: 16.8%; }
+.evo-gel-card { left: 42.7%; top: 23%; height: 19.1%; }
+.evo-lotion-card { left: 80.3%; top: 23.4%; height: 19.2%; }
+.evo-gel-line { left: 21.4%; top: 54.2%; height: 13.5%; }
+.evo-lotion-line { left: 64%; top: 52.8%; height: 15.2%; }
+.evo-immura { left: 76.2%; top: 81.3%; height: 12.6%; }
+
+.detail-gel-cover { left: 76.8%; top: 46.5%; width: 18.6%; height: 28%; }
+.detail-gel { left: 81.2%; top: 48.2%; height: 24.4%; }
+
+.flow-lotion-cover { left: 53.4%; top: 19%; width: 17%; height: 31%; }
+.flow-gel-cover { left: 75.5%; top: 19.1%; width: 18.7%; height: 31.2%; }
+.flow-lotion { left: 58.1%; top: 21.2%; height: 24.9%; }
+.flow-gel { left: 80.1%; top: 20.8%; height: 26.4%; }
 
 .hero-frame {
   box-shadow: 0 28px 90px rgba(1, 33, 20, 0.34);
